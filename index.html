@@ -1,0 +1,47 @@
+<html>
+    <head>
+	<script src="jquery.js"></script>
+	<style>
+	    .red {
+		width: 100px;
+		height: 100px;
+		background-color: red;
+	    }
+	</style>
+    </head>
+    <body>
+	<div id="test0"></div>
+	<input id="testButton0" type="button" value="Test 0: add class"></input>
+	<div id="test1"></div>
+	<input id="testButton1" type="button" value="Test 1: insert html"></input>
+	<div id="test2"></div>
+	<input id="testButton2" type="button" value="Test 2: fade out"></input><br>
+	<input id="testButton3" type="button" value="Test 3: remove"></input>
+	<br>
+	<input id="testButton4" type="button" value="Test 4: mouse over"></input>
+	<div id="test4"></div>
+    </body>
+    <script>
+	$('#testButton0').click(function(){
+	    $('#test0').toggleClass('red');
+	});
+	$('#testButton1').click(function(){
+	    $('#test1').html('fill this with something');
+	});
+	$('#testButton2').click(function(){
+	    $('#test2').toggleClass('red');
+	    $('#test2').fadeOut(1000);
+	});
+	$('#testButton3').click(function(){
+	    $('#testButton3').remove();
+	});
+	$('#testButton4').mouseenter(function(){
+	    $('#test4').addClass('red');
+	    $('#test4').show();
+	});
+	$('#testButton4').mouseleave(function(){
+	    $('#test4').removeClass('red');
+	    $('#test4').hide();
+	});
+    </script>
+</html>
