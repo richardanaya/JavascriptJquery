@@ -18,9 +18,12 @@
 	<input id="testButton2" type="button" value="Test 2: fade out"></input><br>
 	<input id="testButton3" type="button" value="Test 3: remove"></input>
 	<br>
-	<input id="testButton4" type="button" value="Test 4: mouse over"></input>
+	<input id="testButton4" type="button" value="Test 4: mouse over add/remove class"></input><br>
 	<div id="test4"></div>
+	<input id="testButton5" type="button" value="Test 5: mouse over css"></input><br>
+    <input id="testButton6" type="button" value="Test 6: keyboard"></input>
     </body>
+    
     <script>
 	$('#testButton0').click(function(){
 	    $('#test0').toggleClass('red');
@@ -43,5 +46,14 @@
 	    $('#test4').removeClass('red');
 	    $('#test4').hide();
 	});
+	$('#testButton5').mouseenter(function(){
+	    $('#testButton5').css('width','500px');
+	});
+	$('#testButton5').mouseleave(function(){
+	    $('#testButton5').css('width','200px');
+	});
+	$(document).keydown(function(e) {
+		$('#testButton6').val('Test 6: keyboard '+String.fromCharCode(e.keyCode));
+	})
     </script>
 </html>
